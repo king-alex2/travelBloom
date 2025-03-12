@@ -76,8 +76,8 @@ h2{
 }
 
 .topmenu:hover {
-    color: blue;
-    background: rgba(0, 0, 255, 0.1);
+    color: grey;
+    background: rgba(105, 105, 105, 0.1);
     border-radius: 5px;
 }
 
@@ -88,28 +88,40 @@ body::after {
     height: 80px; /* Adjust according to header height */
 }
 
-/* Search Bar Styling */
+/* Combined Search Bar Container */
 .search-container {
     display: flex;
     align-items: center; /* Aligns items vertically */
     justify-content: center; /* Centers content */
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    padding: 5px 10px; /* Adjust padding */
-    background: rgba(255, 255, 255, 0.8);
-    width: 200px; /* Adjust width if needed */
+    max-width: 250px; /* Restricts the search bar width */
+    width: 100%; /* Allows responsiveness */
+    padding: 5px; /* Adjust padding */
+    border: 2px solid #ccc; /* Border styling */
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     position: relative; /* Ensures correct placement */
+    overflow: hidden; /* Prevents overflow */
 }
 
-/* Search Input */
+/* Ensure the navbar doesn't overflow */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures the navbar can wrap content if needed */
+    width: 100%; /* Prevents navbar from exceeding the page width */
+    box-sizing: border-box; /* Makes sure padding doesn’t affect width */
+}
+
 .search-bar {
     border: none;
     outline: none;
     padding: 6px;
     font-size: 16px;
     background: white;
-    width: 100%; /* Ensures the input takes full space */
+    width: 100%; /* Ensures the input takes full space of the container */
     border-radius: 20px; /* Keeps round edges */
+    box-sizing: border-box; /* Prevents padding from affecting the width */
 }
 
 /* Search Button */
@@ -119,12 +131,6 @@ body::after {
     cursor: pointer;
     font-size: 18px;
     padding: 5px;
-    margin-left: 5px; /* Prevents overlap */
-}
-
-/* Fix position inside navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Space between navigation links and search bar */
+    margin-right: 5px; /* Prevents overlap */
+    box-sizing: border-box;
 }
