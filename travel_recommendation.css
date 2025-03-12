@@ -5,28 +5,47 @@ body, h1, ul {
     box-sizing: border-box;
 }
 
+/* Ensure full-page background */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Background image setup */
+body {
+    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww'); /* Replace with your image URL */
+    background-size: cover; /* Covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
 /* Style the header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f8f8f8; /* Adjust as needed */
+    background-color: rgba(248, 248, 248, 0.5); /* Slight transparency to blend with the background */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other elements */
 }
 
 /* Style for the navigation container */
 .navbar {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    width: 100%;
 }
 
 /* Ensure the navigation links align properly */
 .topdiv {
-    float: right;
+    display: flex;
+    gap: 20px;
     padding-right: 1cm;
 }
 
@@ -36,8 +55,18 @@ header {
     color: black;
     font-weight: bold;
     padding: 10px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .topmenu:hover {
     color: blue;
+    background: rgba(0, 0, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Ensure content starts below the fixed header */
+body::after {
+    content: "";
+    display: block;
+    height: 80px; /* Adjust according to header height */
 }
