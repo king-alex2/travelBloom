@@ -1,25 +1,43 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Reset some default styles */
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navigation Bar */
-
-.topmenu {
-    color: white;
-    margin: 10px;
+/* Style the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    font-size: 20px;
-    text-decoration:none;
-  }
+    background-color: #f8f8f8; /* Adjust as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 
-#home {
-    background-color: cyan;
-    padding-bottom: 1cm;
-    margin-left:-1cm;
-    margin-right:-1cm;
-    margin-top:-1cm;
-    padding-top: 2cm;
-    padding-bottom: 2cm;
-    height: 5mm;
-   }
-  
+/* Style for the navigation container */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Ensure the navigation links align properly */
+.topdiv {
+    float: right;
+    padding-right: 1cm;
+}
+
+/* Style individual navigation links */
+.topmenu {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.topmenu:hover {
+    color: blue;
+}
