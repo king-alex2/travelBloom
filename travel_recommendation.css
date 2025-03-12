@@ -22,6 +22,7 @@ body {
 
 /* Style the header */
 header {
+    font-family: sans-serif;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -33,6 +34,21 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensures the navbar stays above other elements */
+}
+
+h2{
+    font-family: sans-serif;
+    font-size: 50px;
+    color: white;
+    display: inline-block; /* Makes border wrap around the text */
+    text-align: center;
+    padding: 10px 20px; /* Adds space around the text */
+    border: 2px solid white; /* Border only around the text */
+    position: absolute; /* Optional: Adjust positioning */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers text perfectly */
+    pointer-events: none; /* Disables click and cursor */
 }
 
 /* Style for the navigation container */
