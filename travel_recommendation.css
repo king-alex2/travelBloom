@@ -1,8 +1,9 @@
 /* Reset some default styles */
-body, h1, ul {
+body, h1, h2, p, ul, li, a, input, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /* Ensure full-page background */
@@ -13,50 +14,42 @@ html, body {
 
 /* Background image setup */
 body {
-    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww'); /* Replace with your image URL */
-    background-size: cover; /* Covers the entire page */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
 }
 
 /* Style the header */
 header {
-    font-family: sans-serif;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency to blend with the background */
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensures the navbar stays above other elements */
+    z-index: 1000;
 }
 
-h2{
-    font-family: sans-serif;
-    font-size: 50px;
-    color: white;
-    display: inline-block; /* Makes border wrap around the text */
-    text-align: center;
-    padding: 10px 20px; /* Adds space around the text */
-    border: 2px solid white; /* Border only around the text */
-    position: absolute; /* Optional: Adjust positioning */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); /* Centers text perfectly */
-    pointer-events: none; /* Disables click and cursor */
+/* Logo/Title */
+header h1 {
+    font-size: 28px;
 }
 
-/* Style for the navigation container */
+/* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: flex-end;
 }
 
 /* Ensure the navigation links align properly */
@@ -88,29 +81,19 @@ body::after {
     height: 80px; /* Adjust according to header height */
 }
 
-/* Combined Search Bar Container */
+/* Search Bar Container */
 .search-container {
     display: flex;
-    align-items: center; /* Aligns items vertically */
-    justify-content: center; /* Centers content */
-    max-width: 250px; /* Restricts the search bar width */
-    width: 100%; /* Allows responsiveness */
-    padding: 5px; /* Adjust padding */
-    border: 2px solid #ccc; /* Border styling */
-    border-radius: 20px; /* Rounded corners */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    position: relative; /* Ensures correct placement */
-    overflow: hidden; /* Prevents overflow */
-}
-
-/* Ensure the navbar doesn't overflow */
-.navbar {
-    display: flex;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures the navbar can wrap content if needed */
-    width: 100%; /* Prevents navbar from exceeding the page width */
-    box-sizing: border-box; /* Makes sure padding doesn’t affect width */
+    justify-content: center;
+    max-width: 250px;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
 }
 
 .search-bar {
@@ -119,18 +102,110 @@ body::after {
     padding: 6px;
     font-size: 16px;
     background: white;
-    width: 100%; /* Ensures the input takes full space of the container */
-    border-radius: 20px; /* Keeps round edges */
-    box-sizing: border-box; /* Prevents padding from affecting the width */
+    width: 100%;
+    border-radius: 20px;
 }
 
-/* Search Button */
 .search-button {
     border: none;
     background: none;
     cursor: pointer;
     font-size: 18px;
     padding: 5px;
-    margin-right: 5px; /* Prevents overlap */
-    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+/* Page Heading */
+h2 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    margin-top: 120px;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 150px auto 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 18px;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff5733;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e04e2b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .search-container {
+        max-width: 100%;
+    }
 }
