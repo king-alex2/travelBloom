@@ -87,13 +87,13 @@ body::after {
     align-items: center;
     justify-content: center;
     max-width: 250px;
-    width: 100%;
-    padding: 5px;
+    width: 50%;
     border: 2px solid #ccc;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.8);
     position: relative;
     overflow: hidden;
+    right: 50px;
 }
 
 .search-bar {
@@ -136,7 +136,7 @@ section {
 }
 
 /* Paragraph Styling */
-p {
+p, p1, p2, p3 {
     font-size: 20px;
     margin: 15px 0;
 }
@@ -174,38 +174,12 @@ button {
     padding: 10px;
     font-size: 18px;
     color: white;
-    background-color: #ff5733;
+    background-color: grey;
     border: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background-color: #e04e2b;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    section {
-        width: 90%;
-    }
-
-    .search-container {
-        max-width: 100%;
-    }
+    background-color: grey;
 }
